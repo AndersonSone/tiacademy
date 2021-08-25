@@ -1,0 +1,30 @@
+body{
+	margin 0;
+
+}
+div {
+	width: 25%;
+	height: auto;
+	background-color: #E6E6FA;
+	margin: 0 auto;
+	border: 2px solid black;
+
+	
+}
+p{
+	margin: 0;
+	display: flex;
+	justify-content: space-between;
+	font-weight: bold;
+
+}
+.espaço{
+	margin-right: 2px;	
+}
+.espaço2{
+	margin-left: 2px;
+}
+.btnclass{
+	background-color: #98FB98;
+
+}
