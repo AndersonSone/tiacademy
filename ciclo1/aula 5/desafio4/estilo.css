@@ -1,0 +1,156 @@
+body{
+margin: 0;
+
+}
+header{
+	width: 100%;
+	height: 100px;
+	margin: 0 auto;
+	box-sizing: content-box;
+	position: fixed;
+	background-color: blue;
+}
+main{
+	
+	
+}
+.ajuste{
+	margin-top: 100px;
+
+}
+.primeiraparte{
+	width: 80%;
+	height: auto;
+
+	background-color: #8FBC8F;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: line;
+}
+.paragrafo{
+	height: auto;
+	width: 50%;
+	box-sizing: content-box;
+	
+	box-sizing: content-box;
+	color: black;
+	font-family: arial , verdana , cursive;
+
+}
+.link{
+	height: auto;
+	width: 100%;
+	box-sizing: content-box;
+	margin: 0;
+	box-sizing: content-box;
+	color: black;
+	font-family: arial , verdana , cursive;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+.caixamenu{
+	width: 50%;
+	height: auto;
+	border-right: 1px dashed black;
+	box-sizing: content-box;
+}
+.botao-menu{
+	width: 100%;
+	height: 30px;
+	background-color: #8FBC8F;
+	border-bottom: 1px solid white;
+	color: white;
+	font-family: arial , verdana , cursive;
+
+}
+.imagem{
+	height: 100px;
+	width: 100%;
+	margin: 0;
+	border: 1px solid black;
+	box-sizing: border-box;
+}
+.participante{
+	width: 80%;
+	height: auto;
+	margin: 0 auto;
+	box-sizing: border-box;
+	
+
+}
+.segunda-parte{
+	width: 80%;
+	height: auto;
+	box-sizing: content-box;
+
+	background-color: #8FBC8F;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: line;
+}
+.cordenador{
+	width: 50%;
+	height: auto;
+	border-right: 1px dashed black;
+	box-sizing: content-box;
+
+}
+.nomes{
+	width: 100%;
+	height: auto;
+	background-color: #8FBC8F;
+	border-bottom: 1px solid white;
+	color: white;
+	font-family: arial , verdana , cursive;
+
+}
+.paragrafo2{
+	height: auto;
+	width: 50%;
+	box-sizing: content-box;
+	margin: 0;
+	box-sizing: content-box;
+	color: black;
+	font-family: arial , verdana , cursive;
+	font-size: 20px;
+
+}
+.color{
+	color: blue;
+
+}
+.preto{
+	color: black;
+}
+
+a{
+	text-decoration: none;
+}
+.footerimproviso{
+	width: 80%;
+	height: 40px;
+	margin: 0 auto;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: cursive;
+	font-size: 20px;
+	text-decoration: underline;
+
+}
+@media screen and (max-width: 700px){
+	.caixamenu{
+		display: none;
+	}
+	.paragrafo{
+		width: 100%;
+	}
+}
+ul{
+	
+	list-style-type: none;
+}
