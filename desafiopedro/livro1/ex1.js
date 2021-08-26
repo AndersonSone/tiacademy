@@ -1,0 +1,10 @@
+var soma = 0;
+let n = parseInt(prompt('digite o 1 valor'));
+soma+=n;  
+n = parseInt(prompt('digite o 1 valor'));
+soma+=n; 
+n = parseInt(prompt('digite o 1 valor'));
+soma+=n; 
+n = parseInt(prompt('digite o 1 valor'));
+soma+=n; 
+console.log("A doma dos 4 numeros sao : " +  soma);

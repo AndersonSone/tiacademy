@@ -1,0 +1,13 @@
+let sacar = parseInt(prompt('digite o valor a sacar'));  
+nota100=parseInt(sacar/100);  
+nota50=parseInt((sacar%100)/50);  
+nota20=parseInt(((sacar%100)%50)/20);
+nota10=parseInt((((sacar%100)%50)%20)/10);
+nota5=parseInt(((((sacar%100)%50)%20)%10)/5);
+nota2=parseInt((((((sacar%100)%50)%20)%10)%5)/2);   
+console.log('numero de nota(s) de 100 :'+nota100);
+console.log('numero de nota(s) de 50 :'+nota50);
+console.log('numero de nota(s) de 20 :'+nota20);
+console.log('numero de nota(s) de 10 :'+nota10);
+console.log('numero de nota(s) de 5 :'+nota5);
+console.log('numero de nota(s) de 2 :'+nota2);
