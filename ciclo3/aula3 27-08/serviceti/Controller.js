@@ -16,22 +16,41 @@ app.get('/',function(req,res){
 });
 
 
-app.get('/clientes', async(req,res)=>{
-    let create=await cliente.create({
-        nome:"Anderson Sone",
-        endereco:"rualalala",
-        cidade:"maringa",
-        uf:"PR",
-        nascimento:"1997-12-01",
-    });
-    res.send('cliente novo foi inserido!');
-});
+
 app.post('/servicos', async(req,res)=>{
     let create=await sservico.create(
         req.body
     );
     res.send('serviço foi inserido!');
 });
+app.post('/clientes', async(req,res)=>{
+    let create=await cliente.create(
+        req.body
+    );
+    res.send('cliente foi inserido!');
+});
+app.post('/pedidos', async(req,res)=>{
+    let create=await pedido.create(
+        req.body
+    );
+    res.send('pedido foi inserido!');
+});
+
+
+
+
+/*
+app.get('/clientes', async(req,res)=>{
+    let create=await cliente.create({
+        nome:"neia sone",
+        endereco:"rua dis federal",
+        cidade:"maringa",
+        uf:"PR",
+        nascimento:"1997-11-01",
+    });
+    res.send('cliente novo foi inserido!');
+});
+
 app.get('/pedidos', async(req,res)=>{
     let create=await pedido.create({
         idCliente:"1",
@@ -43,7 +62,7 @@ app.get('/pedidos', async(req,res)=>{
     });
     res.send('pedidos enviado!');
 });
-
+*/
 app.get('/servicos',function(req,res){
     res.send('lista dos servicos');
 });
