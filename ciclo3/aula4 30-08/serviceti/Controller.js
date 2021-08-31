@@ -127,13 +127,13 @@ app.get('/ofertaspedidos',async(req,res)=>{
         res.json(pedidos);
     });
 });
-/*
+
 app.get('/valor/:id',async(req,res)=>{
-    await pedido.sum(valor, { ClienteId: { clientes: { [req.params.id]: req.params.id } } })
+    await pedido.sum('valor', { where:  { ClienteId: req.params.id  } })
     .then(function(pedidos){
         res.json(pedidos);});
 });
-*/
+
 /*
 app.get('/clientes', async(req,res)=>{
     let create=await cliente.create({
