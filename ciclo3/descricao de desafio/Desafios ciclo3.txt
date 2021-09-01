@@ -1,0 +1,76 @@
+Desafio 1 do ciclo3 
+acredito que poderia ser adicionado 
+colaboradores onde tinha cliente que ja vendeu ,e qual servico ele mais vendi e qual preco do serviço.
+avaliaçao onde cliente avalia e sugestao paraa o serviço
+sugestao onde ele indica quais cursos devia ter e como deveria ser ensinado
+
+Desafio 2 do ciclo3
+adicionar 5 pedidos e adicionar 15 clientes
+segui imagem com titulo imagem1.jpg e imagem2.jpg onde mostra tabela onde criei eles
+
+Desafio 3 do ciclo3
+mostrar total de pedido em valor
+utilizei o codigo
+///soma valores desafio dia3
+
+
+app.get('/valor/:id',async(req,res)=>{
+
+    await pedido.sum('valor', { where:  { ClienteId: req.params.id  } })
+
+    .then(function(pedidos){
+
+        res.json(pedidos);});
+});
+
+segui o total calculada na imagem3.jpg
+
+Desafio 4 do ciclo3
+foi so trocado e usado 
+
+app.get('/clientepedidos/:id',async(req,res)=>{
+
+    await cliente.findByPk(req.params.id,{
+
+        include:[{all:true}]
+
+    }).then(cliente=>{
+
+        return res.json({cliente})
+    });
+});
+
+
+tbm foi usado 
+app.put('/editarpedidosporcliente',(req,res)=>{
+
+    pedido.update(req.body,{
+
+        where:{ClienteId:req.body.ClienteId}
+
+    }).then(function(){
+
+        return res.json({
+
+            error:true,
+ 
+            message:"pedido modificado com sucesso"
+
+        });
+
+    }).catch(function(erro){
+ 
+       return res.status(400).json({
+ 
+           error:true,
+
+            message:"nao foi possivel modifificar"
+
+        });
+    });
+});
+
+--------------------------------------------------------------------------------------
+
+
+
