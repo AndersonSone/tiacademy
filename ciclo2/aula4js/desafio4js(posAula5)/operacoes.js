@@ -24,7 +24,7 @@ itemProduto.forEach((item)=>{
         //referencia para saber se tem um produto ja lançado = método indexOf()
         if(armazenaItem.indexOf(item.textContent) == -1){
             armazenaItem.push(item.textContent);
-            cestaDoCliente.appendChild(li).textContent = item.textContent = item.textContent;
+            cestaDoCliente.appendChild(li).textContent = item.textContent ;
             totalPedido += Number(item.dataset.preco);
             mostraTotalCompra.value = totalPedido.toLocaleString("pt-BR",
             {style:"currency", currency: "BRL"})
@@ -33,15 +33,16 @@ itemProduto.forEach((item)=>{
         }
     });
 });
+
+
 //aqui ele remove as coisas com 2 click
  const cesta = document.querySelectorAll("#cestaDoCliente");//aqui que eu estava errando feio pq da para puxar usando classe do ul
-    const list = document.querySelector("ul#cestaDoCliente");
     cesta.forEach((item) => {
         item.addEventListener('dblclick', (itemCesta) => {
             var idx = armazenaItem.indexOf(itemCesta.target.textContent);
             if (idx > -1) {
                 totalPedido -= Number(itemCesta.target.dataset.preco);
-                cestaDocliente.removeChild(list.childNodes[idx]);
+                cestaDocliente.removeChild(cestaDoCliente.childNodes[idx]);
                 armazenaItem.splice(idx, 1);
                 mostraTotalCompra.value = totalPedido.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });//aqui para mostra valores em R$
             }
